@@ -1,0 +1,29 @@
+{
+  "name": "tech_blog",
+  "version": "1.0.0",
+  "description": "blog that lets users set up account, create, read, update, and delete blog posts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zreggert/tech_blog.git"
+  },
+  "author": "Zachary Eggert",
+  "license": "ISC",
+  "dependencies": {
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },
+  "bugs": {
+    "url": "https://github.com/zreggert/tech_blog/issues"
+  },
+  "homepage": "https://github.com/zreggert/tech_blog#readme"
+}
