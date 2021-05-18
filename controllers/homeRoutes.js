@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-router.get('/', async (req, res) => {
-    res.render('main');
+router.get('/', (req, res) => {
+    res.render('home');
 });
 
 module.exports = router;
