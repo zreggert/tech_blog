@@ -30,13 +30,20 @@ Project.init(
                 key: 'id',
             },
         },
+        post_comments: {
+            type: Datatypes.STING,
+            references: {
+                model: 'comment',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'post',
     }
 );
 
