@@ -20,4 +20,8 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+router.get('/newblog', (req, res) => {
+    res.render('newblog')
+})
+
 module.exports = router;
