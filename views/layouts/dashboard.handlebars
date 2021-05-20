@@ -7,6 +7,29 @@
     <title>Dashboard</title>
 </head>
 <body>
-    
+       <header>
+        <h1>Welcome to Tech Blog</h1>
+        <h3>Let's talk tech!</h3>
+        <nav class="navbar">
+            <ul>
+                <li class="navOpt">
+                    <a href="/">Home</a>
+                </li>
+                <li class="navOpt">
+                    <a href="/dashboard">Dashboard</a>
+                </li>
+                <li class="navOpt">
+                    <a href="/" id="logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="user-action">
+            <button class="new-blog-btn" id="new-blog-btn" type="submit" onclick="/newblog">+New Blog</button>
+        </div>
+        {{{body}}}
+    </main>
 </body>
+<script src="./js/userLogout.js"></script>
 </html>

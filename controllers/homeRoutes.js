@@ -1,5 +1,5 @@
-const Post = require('../models/Post');
-const User = require('../models/User');
+const { Post, User } = require('../models/');
+
 
 const router = require('express').Router();
 
@@ -9,11 +9,10 @@ router.get('/', async (req, res) => {
             inlcude: [
                 {
                     model: User,
-                    attributes: ['name'],
                 },
             ],
         });
-        const posts = postData.map((project) => project.get({ plain: true}));
+        const posts = postData.map((post) => post.get({ plain: true}));
         res.render('home', {
             posts,
         });
