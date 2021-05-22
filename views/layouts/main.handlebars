@@ -20,7 +20,11 @@
                     <a href="/dashboard">Dashboard</a>
                 </li>
                 <li class="navOpt">
+                    {{#if logged_in}}
+                    <a href="/" id="logout">Logout</a>
+                    {{else}}
                     <a href="/login">Login</a>
+                    {{/if}}
                 </li>
             </ul>
         </nav>

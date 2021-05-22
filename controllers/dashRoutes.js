@@ -1,13 +1,13 @@
 const { Post, User } = require('../models');
-const withAuth = require('../utils/auth')
+const withAuth = require('../utils/auth');
 
 const router = require('express').Router();
 
 router.get('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
-            where: {
-                user_id: req.session.user_id,
+            include: {
+                model: User,
             },
         });
         const posts = postData.map((post) => post.get({ plain: true }));
@@ -20,8 +20,28 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-router.get('/newblog', (req, res) => {
-    res.render('newblog')
-})
+router.get('/userDash', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findAll({
+            where: {
+                user_id: req.session.user_id,
+            },
+        });
+        const posts = postData.map((post) => post.get({ plain: true }));
+        res.render('userDash', {
+            layout: 'dashboard',
+            posts,
+        });
+    } catch (err) {
+        res.redirect('login');
+    }
+});
+
+
+router.get('/newblog', withAuth, (req, res) => {
+    res.render('newblog', {
+        layout: 'dashboard',
+    });
+});
 
 module.exports = router;

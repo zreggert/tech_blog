@@ -13,10 +13,10 @@
         <nav class="navbar">
             <ul>
                 <li class="navOpt">
-                    <a href="/">Home</a>
+                    <a href="/dashboard">Home</a>
                 </li>
                 <li class="navOpt">
-                    <a href="/dashboard">Dashboard</a>
+                    <a href="/dashboard/userDash">Dashboard</a>
                 </li>
                 <li class="navOpt">
                     <a href="/" id="logout">Logout</a>
@@ -24,12 +24,9 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="user-action">
-            <a href="/dashboard/newblog">+New Blog</a>
-        </div>
+    <main> 
         {{{body}}}
     </main>
 </body>
-<script src="./js/userLogout.js"></script>
+<script src="/js/userLogout.js"></script>
 </html>
