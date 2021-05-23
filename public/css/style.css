@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: block;
+    padding-left: 75px;
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    background-color: cadetblue;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    display: inline;
+}
+
+li {
+    display: inline;
+    padding-left: 30px;
+}
+
+main {
+    padding: 75px;
+}
+
+.navbar {
+    text-align: right;
+}
+
+.post-container {
+    border: 5px solid black;
+    margin: 5px;
+}
+
+

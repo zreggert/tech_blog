@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 const router = require('express').Router();
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
             inlcude: [
@@ -13,14 +13,25 @@ router.get('/', async (req, res) => {
                 },
             ],
         });
+
         const posts = postData.map((post) => post.get({ plain: true}));
-        res.render('home', {
-            posts,
-        });
+
+        if (withAuth) {
+            res.render('home', {
+                layout: 'dashboard',
+                posts,
+            });
+        } else {
+            res.render('home', {
+                posts,
+            });
+        }
+       
     } catch (err) {
         res.status(500).json(err);
     }
 });
+
 
 router.get('/post/:id', async (req, res) => {
     try {

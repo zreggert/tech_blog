@@ -19,14 +19,14 @@
                 <li class="navOpt">
                     <a href="/dashboard">Dashboard</a>
                 </li>
-                {{#if req.session.logged_in}}
-                <li class="navOpt">
-                    <a href="/" id="logout">Logout</a>
-                </li>
+                {{#if session.logged_in}}
+                    <li class="navOpt">
+                        <a href="/" id="logout">Logout</a>
+                    </li>
                 {{else}}
-                <li class="navOpt">
-                    <a href="/login">Login</a>
-                </li>
+                    <li class="navOpt">
+                        <a href="/login">Login</a>
+                    </li>
                 {{/if}}
             </ul>
         </nav>
@@ -35,7 +35,7 @@
         {{{body}}}
     </main>
 
-    {{#if req.session.logged_in}}
+    {{#if logged_in}}
     <script src="/js/userLogout.js"></script>
     {{/if}}
 </body>
