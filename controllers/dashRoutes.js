@@ -28,6 +28,7 @@ router.get('/', withAuth, async (req, res) => {
         const postData = await Post.findAll();
         const posts = postData.map((post) => post.get({ plain: true }));
         res.render('home', {
+            layout: 'dashboard',
             posts,
         });
     } catch (err) {
@@ -35,6 +36,22 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+router.get('/userDash', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findAll({
+            where: {
+                user_id: req.session.user_id,
+            },
+        });
+        const posts = postData.map((post) => post.get({ plain: true }));
+        res.render('userDash', {
+            layout: 'dashboard',
+            posts,
+        });
+    } catch (err) {
+        res.redirect('login');
+    }
+});
 // router.get('/userDash', withAuth, async (req, res) => {
 //     try {
 //         const postData = await Post.findAll({
