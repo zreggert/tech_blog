@@ -31,6 +31,18 @@ main {
     padding: 75px;
 }
 
+a {
+    color: #02577a;
+}
+
+a:hover {
+    color: #02a9f7;
+}
+
+button {
+    padding: 5px;
+}
+
 .navbar {
     text-align: right;
 }
@@ -61,3 +73,4 @@ main {
 .user-form {
     padding-bottom: 5px;
 }
+
