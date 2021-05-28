@@ -44,6 +44,10 @@ button {
     padding: 5px;
 }
 
+p {
+    font-size: 1.2em;
+}
+
 .navbar {
     text-align: right;
 }
@@ -73,5 +77,10 @@ button {
 
 .user-form {
     padding-bottom: 5px;
+}
+
+#content-input {
+    width: 400px;
+    height: 400px;
 }
 
