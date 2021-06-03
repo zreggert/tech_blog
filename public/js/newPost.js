@@ -14,6 +14,7 @@ const createPost = async (event) => {
      document.location.replace('/dashboard');
 };
 
+
 document
     .querySelector('#create-post-form')
     .addEventListener('submit', createPost);
