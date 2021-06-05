@@ -24,9 +24,6 @@
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },
-  "engines": {
-    "node": "0.10.41"
-  },
   "bugs": {
     "url": "https://github.com/zreggert/tech_blog/issues"
   },
