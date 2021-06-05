@@ -24,6 +24,10 @@
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },
+  "engines": {
+    "node": "v15.14.0",
+    "npm": "7.7.6"
+  },
   "bugs": {
     "url": "https://github.com/zreggert/tech_blog/issues"
   },
